@@ -1,0 +1,65 @@
+:root {
+  --ink: #172d2c;
+  --cream: #e9e3dc;
+  --coral: #e87958;
+  --mint: #b8ceba;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "DM Mono", monospace;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 100vh;
+  padding: 2rem clamp(1.5rem, 5vw, 5rem);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eyebrow, .pre-title, footer { font-size: .7rem; letter-spacing: .11em; text-transform: uppercase; }
+.eyebrow { margin: 0; font-weight: 500; }
+.eyebrow span { color: var(--coral); margin: 0 .3rem; }
+
+.intro { margin-top: auto; margin-bottom: auto; transform: translateY(2vh); }
+.pre-title { margin: 0 0 1.25rem; color: #4d605e; }
+h1 {
+  max-width: 9ch;
+  margin: 0;
+  font: 500 clamp(4.4rem, 12vw, 10rem)/.82 "Playfair Display", Georgia, serif;
+  letter-spacing: -.07em;
+}
+h1 em { color: var(--coral); font-weight: 500; }
+.message { max-width: 35rem; margin: 2.4rem 0 0; color: #405654; font-size: clamp(.75rem, 1.6vw, .9rem); line-height: 1.8; }
+
+footer { display: flex; align-items: end; justify-content: space-between; }
+footer p { margin: 0; color: #58706d; }
+footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: .25rem; letter-spacing: .04em; }
+footer a span { color: var(--coral); font-size: 1rem; margin-left: .25rem; }
+
+.orb { position: fixed; z-index: 0; border-radius: 50%; filter: blur(1px); }
+.orb-one { width: min(47vw, 38rem); aspect-ratio: 1; top: -12%; right: -10%; background: var(--mint); }
+.orb-two { width: min(25vw, 20rem); aspect-ratio: 1; bottom: -10%; left: 44%; background: #f2ba90; }
+.spark { position: fixed; z-index: 0; color: var(--coral); font-family: Georgia, serif; }
+.spark-one { top: 22%; right: 26%; font-size: clamp(1.8rem, 4vw, 3.5rem); }
+.spark-two { bottom: 23%; right: 15%; color: var(--ink); font-size: 1.35rem; }
+
+@media (max-width: 600px) {
+  main { padding: 1.5rem; }
+  h1 { font-size: clamp(4.3rem, 21vw, 7rem); }
+  .intro { transform: translateY(0); }
+  .message br { display: none; }
+  footer { align-items: flex-start; flex-direction: column; gap: .9rem; }
+  .orb-one { width: 82vw; right: -32vw; top: -7%; }
+  .orb-two { width: 50vw; left: 48%; }
+  .spark-one { top: 17%; right: 20%; }
+}
