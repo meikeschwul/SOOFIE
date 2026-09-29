@@ -1,0 +1,9 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ if eq site.Language.Lang "nl" }}Pagina niet gevonden{{ else }}Page not found{{ end }}</h1>
+</header>
+<div class="post-content">
+  <p>{{ if eq site.Language.Lang "nl" }}De pagina die je zoekt bestaat niet of is verplaatst.{{ else }}The page you are looking for does not exist or has moved.{{ end }}</p>
+  <p><a href="{{ "" | absLangURL }}">{{ if eq site.Language.Lang "nl" }}Terug naar de startpagina{{ else }}Back to the home page{{ end }}</a></p>
+</div>
+{{- end }}

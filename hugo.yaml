@@ -1,0 +1,57 @@
+baseURL: "https://soofie.nl/"
+defaultContentLanguage: "nl"
+title: "SOOFIE"
+theme: "PaperMod"
+
+defaultContentLanguageInSubdir: false
+
+params:
+  env: production
+  description: "Muziek, verhalen en updates van SOOFIE."
+  author: "SOOFIE"
+  defaultTheme: light
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  displayFullLangName: true
+
+languages:
+  nl:
+    label: Nederlands
+    locale: nl-NL
+    weight: 1
+    params:
+      description: "Muziek, verhalen en updates van SOOFIE."
+      homeInfoParams:
+        Title: "SOOFIE"
+        Content: "Muziek, verhalen en alles daartussen."
+    menus:
+      main:
+        - identifier: blog
+          name: Blog
+          url: /posts/
+          weight: 10
+        - identifier: over
+          name: Over SOOFIE
+          url: /about/
+          weight: 20
+  en:
+    label: English
+    locale: en-US
+    weight: 2
+    params:
+      description: "Music, stories and updates from SOOFIE."
+      homeInfoParams:
+        Title: "SOOFIE"
+        Content: "Music, stories, and everything in between."
+    menus:
+      main:
+        - identifier: blog
+          name: Blog
+          url: /posts/
+          weight: 10
+        - identifier: about
+          name: About SOOFIE
+          url: /about/
+          weight: 20

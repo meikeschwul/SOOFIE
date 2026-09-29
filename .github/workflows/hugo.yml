@@ -1,0 +1,56 @@
+name: Publish Hugo site to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.167.0
+      HUGO_SHA256: 2d012c4490248195e2db07e89ce7f76af8bead93233e930bdf3733c53acd3b23
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          curl --fail --silent --show-error --location --remote-name "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          echo "${HUGO_SHA256}  hugo_extended_${HUGO_VERSION}_linux-amd64.deb" | sha256sum --check --status
+          sudo dpkg -i "hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          submodules: recursive
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

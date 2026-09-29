@@ -1,0 +1,85 @@
+:root {
+  --theme: #f5e8f1;
+  --entry: #fff9fd;
+  --primary: #382345;
+  --secondary: #715675;
+  --tertiary: #d8bde1;
+  --content: #694b6c;
+  --code-block-bg: #f2e1ee;
+  --code-bg: #e9d4e4;
+  --border: #e4d1df;
+}
+
+:root[data-theme="dark"] {
+  --theme: #271b2d;
+  --entry: #34243b;
+  --primary: #f5e8f1;
+  --secondary: #d8bde1;
+  --tertiary: #715675;
+  --content: #e6d7e9;
+  --code-block-bg: #34243b;
+  --code-bg: #45314d;
+  --border: #543e5d;
+}
+
+.list {
+  background: var(--theme);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.logo,
+.post-title,
+.first-entry h1,
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+a,
+.logo a:hover,
+.post-title a:hover {
+  color: #a72c63;
+}
+
+.pagination a:hover {
+  background: #d8bde1;
+  color: #382345;
+}
+
+:root[data-theme="dark"] a,
+:root[data-theme="dark"] .logo a:hover,
+:root[data-theme="dark"] .post-title a:hover {
+  color: #dc6b9b;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #a72c63;
+  outline-offset: 3px;
+}
+
+:root[data-theme="dark"] a:focus-visible,
+:root[data-theme="dark"] button:focus-visible {
+  outline-color: #dc6b9b;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  color: #fff9fd;
+  background: #382345;
+  border-radius: 0.25rem;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  color: #fff9fd;
+  transform: translateY(0);
+}
