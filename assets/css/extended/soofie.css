@@ -1,0 +1,51 @@
+:root {
+  --theme: #f5e8f1;
+  --entry: #fff9fd;
+  --primary: #382345;
+  --secondary: #715675;
+  --tertiary: #d8bde1;
+  --content: #694b6c;
+  --code-block-bg: #f2e1ee;
+  --code-bg: #e9d4e4;
+  --border: #e4d1df;
+}
+
+:root[data-theme="dark"] {
+  --theme: #271b2d;
+  --entry: #34243b;
+  --primary: #f5e8f1;
+  --secondary: #d8bde1;
+  --tertiary: #715675;
+  --content: #e6d7e9;
+  --code-block-bg: #34243b;
+  --code-bg: #45314d;
+  --border: #543e5d;
+}
+
+.list {
+  background: var(--theme);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.logo,
+.post-title,
+.first-entry h1,
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+a,
+.logo a:hover,
+.post-title a:hover {
+  color: #dc6b9b;
+}
+
+.pagination a:hover {
+  background: #d8bde1;
+  color: #382345;
+}
