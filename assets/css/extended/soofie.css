@@ -42,10 +42,44 @@ body {
 a,
 .logo a:hover,
 .post-title a:hover {
-  color: #dc6b9b;
+  color: #a72c63;
 }
 
 .pagination a:hover {
   background: #d8bde1;
   color: #382345;
+}
+
+:root[data-theme="dark"] a,
+:root[data-theme="dark"] .logo a:hover,
+:root[data-theme="dark"] .post-title a:hover {
+  color: #dc6b9b;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #a72c63;
+  outline-offset: 3px;
+}
+
+:root[data-theme="dark"] a:focus-visible,
+:root[data-theme="dark"] button:focus-visible {
+  outline-color: #dc6b9b;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  color: #fff9fd;
+  background: #382345;
+  border-radius: 0.25rem;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  color: #fff9fd;
+  transform: translateY(0);
 }

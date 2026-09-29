@@ -31,7 +31,7 @@ Maak voor de Engelse versie een bestand met dezelfde naam en de taalcode, bijvoo
 ## Huisstijl aanpassen
 
 - Kleuren en PaperMod-stijlen: `assets/css/extended/soofie.css`
-- Google Fonts: `layouts/partials/extend_head.html`
+- Lokale webfonts: `assets/css/extended/fonts.css` en `static/fonts/`
 - Site-instellingen en navigatie: `hugo.yaml`
 
 De site is ingesteld voor publicatie op <https://soofie.nl/> via GitHub Pages. Bij iedere push naar de `main`-branch bouwt en publiceert GitHub Actions de site automatisch.
