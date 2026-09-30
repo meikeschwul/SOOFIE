@@ -1,3 +1,7 @@
 /public/
 /resources/_gen/
 /.hugo_build.lock
+
+# Lokale documentatie blijft buiten de repository.
+/private-docs/
+/[Aa][Gg][Ee][Nn][Tt][Ss].[Mm][Dd]
