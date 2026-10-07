@@ -1,0 +1,209 @@
+/* Terminal-thema: bouwt voort op de SOOFIE-kleuren en lettertypen uit soofie.css. */
+
+:root {
+  --mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --accent: #a72c63;
+  --terminal-bar: #e9d4e4;
+}
+
+:root[data-theme="dark"] {
+  --accent: #dc6b9b;
+  --terminal-bar: #45314d;
+}
+
+body {
+  background: var(--theme);
+}
+
+/* Koptekst en menu als opdrachtregel */
+
+.header-nav,
+.breadcrumbs,
+.post-meta,
+.entry-footer,
+.footer,
+.pagination,
+.paginav,
+.lang-menu {
+  font-family: var(--mono);
+}
+
+.logo > a::before {
+  content: "~$ " / "";
+  font-family: var(--mono);
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+#menu a::before {
+  content: "./" / "";
+  color: var(--accent);
+}
+
+/* Het terminalvenster */
+
+.terminal {
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  margin: calc(var(--gap) / 2) auto var(--gap);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px -18px rgba(56, 35, 69, 0.45);
+  overflow: hidden;
+}
+
+.list .terminal {
+  background: var(--theme);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--terminal-bar);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.terminal-dots {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.terminal-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.terminal-dots span:nth-child(2) {
+  background: #d8bde1;
+}
+
+.terminal-dots span:nth-child(3) {
+  background: #715675;
+}
+
+.terminal-title {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding-right: 45px;
+}
+
+.terminal .main {
+  min-height: 0;
+}
+
+/* Opdrachten, prompt en cursor */
+
+.terminal-command {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.terminal-prompt {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.first-entry.home-info {
+  min-height: 0;
+  margin: var(--gap) 0 calc(var(--gap) * 1.5);
+}
+
+.home-info .entry-header {
+  margin: 4px 0 18px;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.9em;
+  margin-left: 0.15em;
+  vertical-align: -0.05em;
+  background: var(--accent);
+  animation: terminal-blink 1.1s steps(1) infinite;
+}
+
+@keyframes terminal-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-cursor {
+    animation: none;
+  }
+}
+
+/* Berichten en paginakoppen */
+
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+}
+
+.post-entry .entry-header h2::before,
+.page-header h1::before,
+.post-title::before {
+  content: "> " / "";
+  font-family: var(--mono);
+  font-size: 0.75em;
+  color: var(--accent);
+}
+
+.post-entry .entry-hint-parent,
+.post-title.entry-hint-parent {
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.4em;
+}
+
+.post-meta::before,
+.post-entry .entry-footer::before {
+  content: "# " / "";
+  color: var(--accent);
+}
+
+.post-content code,
+.post-content pre {
+  font-family: var(--mono);
+}
+
+.post-content blockquote {
+  border-inline-start-color: var(--accent);
+}
+
+.pagination a,
+.paginav {
+  border-radius: 4px;
+}
+
+.footer::before {
+  content: "-- " / "";
+}
+
+@media screen and (max-width: 768px) {
+  .terminal {
+    margin: 0 var(--gap-mobile, 12px) var(--gap);
+  }
+
+  .terminal-title {
+    padding-right: 0;
+    text-align: left;
+  }
+}
