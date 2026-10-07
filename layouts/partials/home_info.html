@@ -1,0 +1,16 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <p class="terminal-command" aria-hidden="true"><span class="terminal-prompt">~$</span> whoami</p>
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}<span class="terminal-cursor" aria-hidden="true"></span></h1>
+    </header>
+    <p class="terminal-command" aria-hidden="true"><span class="terminal-prompt">~$</span> cat intro.txt</p>
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}
