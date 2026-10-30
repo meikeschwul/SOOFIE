@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SOOFIE</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on SOOFIE</description>
+    <generator>Hugo</generator>
+    <language>nl</language>
+    <lastBuildDate>Wed, 20 Jan 2027 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ut Labore Dolore</title>
+      <link>http://localhost:1313/shows/show-3/</link>
+      <pubDate>Wed, 20 Jan 2027 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/shows/show-3/</guid>
+      <description>Lorem ipsum dolor sit amet · Consectetur</description>
+    </item>
+    <item>
+      <title>Sed Do Eiusmod</title>
+      <link>http://localhost:1313/shows/show-2/</link>
+      <pubDate>Sun, 20 Dec 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/shows/show-2/</guid>
+      <description>Lorem ipsum dolor sit amet · Consectetur</description>
+    </item>
+    <item>
+      <title>Consectetur Adipiscing</title>
+      <link>http://localhost:1313/shows/show-1/</link>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/shows/show-1/</guid>
+      <description>Lorem ipsum dolor sit amet · Consectetur</description>
+    </item>
+    <item>
+      <title>Tempor Magna</title>
+      <link>http://localhost:1313/muziek/release-4/</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/muziek/release-4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    <item>
+      <title>Amet Elit</title>
+      <link>http://localhost:1313/muziek/release-3/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/muziek/release-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    <item>
+      <title>Dolor Sit</title>
+      <link>http://localhost:1313/muziek/release-2/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/muziek/release-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    <item>
+      <title>Lorem Ipsum</title>
+      <link>http://localhost:1313/muziek/release-1/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/muziek/release-1/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Boeking: &lt;a href=&#34;mailto:hello@example.org&#34;&gt;hello@example.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Management: &lt;a href=&#34;mailto:lorem@example.org&#34;&gt;lorem@example.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pers: &lt;a href=&#34;mailto:ipsum@example.org&#34;&gt;ipsum@example.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Over</title>
+      <link>http://localhost:1313/over/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/over/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

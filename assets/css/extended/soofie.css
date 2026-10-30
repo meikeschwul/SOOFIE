@@ -1,0 +1,104 @@
+/* Roze thema met hoog contrast (WCAG AA/AAA).
+   Licht: tekst #3a0a24 op #fff0f6 = ~14:1, accent #a3004f op #fff0f6 = ~7:1
+   Donker: tekst #ffe4f0 op #2a0a1b = ~14:1, accent #ff9cc7 op #2a0a1b = ~9:1 */
+:root {
+    --theme: #fff0f6;
+    --entry: #ffffff;
+    --primary: #3a0a24;
+    --secondary: #6e2a4d;
+    --tertiary: #f7c6dc;
+    --content: #3a0a24;
+    --code-bg: #ffe0ee;
+    --border: #f2b5d0;
+    --accent: #a3004f;
+    --accent-hover: #6f0035;
+    --on-accent: #ffffff;
+}
+:root[data-theme="dark"] {
+    --theme: #2a0a1b;
+    --entry: #3d1229;
+    --primary: #ffe4f0;
+    --secondary: #f5b8d3;
+    --tertiary: #5c2140;
+    --content: #ffe4f0;
+    --code-bg: #4a1834;
+    --border: #6b2b4d;
+    --accent: #ff9cc7;
+    --accent-hover: #ffc4de;
+    --on-accent: #2a0a1b;
+}
+@media (prefers-color-scheme: dark) {
+    :root[data-theme="auto"] {
+        --theme: #2a0a1b; --entry: #3d1229; --primary: #ffe4f0; --secondary: #f5b8d3;
+        --tertiary: #5c2140; --content: #ffe4f0; --code-bg: #4a1834; --border: #6b2b4d;
+        --accent: #ff9cc7; --accent-hover: #ffc4de; --on-accent: #2a0a1b;
+        color-scheme: dark;
+    }
+}
+
+body, .list {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--theme);
+    color: var(--content);
+    font-size: 18px;
+    line-height: 1.7;
+}
+h1, h2, h3, .logo a, .post-title, .entry-header h2 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+.logo a { font-size: 1.5rem; letter-spacing: 0.08em; color: var(--accent); }
+.first-entry .entry-header h1, .page-header h1, .post-title { color: var(--primary); }
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+.post-content a, .first-entry .entry-content a { text-decoration: underline; }
+
+#menu a { font-weight: 700; }
+#menu .active { border-bottom: 3px solid var(--accent); }
+
+.post-entry, .first-entry {
+    background: var(--entry);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+}
+.post-entry:active { transform: none; }
+.entry-footer, .post-meta { color: var(--secondary); }
+
+.button, .paginav a, .pagination a {
+    background: var(--accent);
+    color: var(--on-accent);
+    border-radius: 999px;
+    font-weight: 700;
+}
+.social-icons a { color: var(--accent); }
+
+/* Zichtbare focusrand voor toetsenbordgebruikers */
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* Header: zelfde breedte als de content, zodat logo en menu eronder uitlijnen */
+:root { --nav-width: 720px; }
+.header-nav { align-items: center; }
+.logo, .menu { align-items: center; }
+.logo a { line-height: var(--header-height); letter-spacing: 0.08em; margin-right: -0.08em; }
+.menu { gap: var(--gap); }
+.menu a { font-size: 16px; line-height: var(--header-height); }
+.menu a span { display: inline-block; line-height: 1.6; padding-bottom: 2px; }
+.menu .active { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--accent); }
+#menu .active { border-bottom: 0; }
+
+/* Home-kaart: padding binnen de rand, zodat tekst en icoontjes netjes op één lijn staan */
+.first-entry { padding: calc(var(--gap) * 1.5); min-height: 0; }
+.home-info .social-icons { margin-inline-start: -10px; }
+.home-info .social-icons a:first-of-type { padding-inline-start: 10px; }
+.social-icons a svg { height: 28px; width: 28px; }
+.social-icons a { border-radius: 8px; }
+.social-icons a:hover { background: var(--tertiary); }

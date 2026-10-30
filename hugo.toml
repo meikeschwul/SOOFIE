@@ -1,0 +1,56 @@
+baseURL = "https://example.org/"
+defaultContentLanguage = "nl"
+buildFuture = true
+title = "SOOFIE"
+theme = "PaperMod"
+pagination.pagerSize = 6
+enableRobotsTXT = true
+
+[params]
+  env = "production"
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  author = "SOOFIE"
+  defaultTheme = "auto"
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  ShowToc = false
+  disableThemeToggle = true
+  disableSpecial1stPost = false
+
+  [params.homeInfoParams]
+    Title = "SOOFIE"
+    Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://instagram.com/"
+  [[params.socialIcons]]
+    name = "spotify"
+    url = "https://open.spotify.com/"
+  [[params.socialIcons]]
+    name = "youtube"
+    url = "https://youtube.com/"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:hello@example.org"
+
+[menu]
+  [[menu.main]]
+    name = "Muziek"
+    url = "/muziek/"
+    weight = 10
+  [[menu.main]]
+    name = "Shows"
+    url = "/shows/"
+    weight = 20
+  [[menu.main]]
+    name = "Over"
+    url = "/over/"
+    weight = 30
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 40
