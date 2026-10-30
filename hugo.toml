@@ -43,10 +43,6 @@ enableRobotsTXT = true
     url = "/muziek/"
     weight = 10
   [[menu.main]]
-    name = "Shows"
-    url = "/shows/"
-    weight = 20
-  [[menu.main]]
     name = "Over"
     url = "/over/"
     weight = 30
